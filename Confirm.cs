@@ -8,10 +8,10 @@ public class Confirm : Command
 {
     [RequiredParameter, ParameterAlias(NamelessParameterAlias), Documentation("Message to show the player.")]
     public StringParameter ConfirmationMessage;
-    [ParameterAlias("yes"), Documentation("Label to @goto if the player chooses to preceed.")]
+    [RequiredParameter, ParameterAlias("yes"), Documentation("Label to @goto if the player chooses to preceed.")]
     [ResourceContext(ScriptsConfiguration.DefaultPathPrefix, 0), ConstantContext("Labels/{:Path[0]??$Script}", 1)]
     public NamedStringParameter YesLabel;
-    [ParameterAlias("no"), Documentation("Label to @goto if the player chooses not to preceed.")]
+    [RequiredParameter, ParameterAlias("no"), Documentation("Label to @goto if the player chooses not to preceed.")]
     [ResourceContext(ScriptsConfiguration.DefaultPathPrefix, 0), ConstantContext("Labels/{:Path[0]??$Script}", 1)]
     public NamedStringParameter NoLabel;
     [ParameterAlias("reset")]
